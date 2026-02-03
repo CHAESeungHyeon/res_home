@@ -1,7 +1,7 @@
 /* css변수선언 */
 :root {
   --bg-color: #bfd9f2;
-  --hover-color: #fa8277;
+  --hover-color: #fb5454;
   --foot-color: #95badf;
   --text-color: #555;
   --white: #f1f1f1;
@@ -44,7 +44,7 @@ a {
 }
 
 body {
-  font-family: "Monaco", "sans-serif";
+  font-family: "Monaco", sans-serif;
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -174,7 +174,7 @@ section>.wrap {
   margin-top: var(--padding-lg);
 }
 
-#contents .wrap {
+#contents > .wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--padding-mc);
@@ -323,7 +323,7 @@ footer .author {
     transition:max-height 0.5s;
   }
 
-  .gnb .active {
+  .gnb.active{
     max-height: 400px;
   }
 

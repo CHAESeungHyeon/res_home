@@ -1,0 +1,365 @@
+/* css변수선언 */
+:root {
+  --bg-color: #bfd9f2;
+  --hover-color: #fa8277;
+  --foot-color: #95badf;
+  --text-color: #555;
+  --white: #f1f1f1;
+  --gray: #ccc;
+  --accent-color: #8baab9;
+
+  --padding-ex-lg: 160px;
+  --padding-lg: 100px;
+  --padding-md: 60px;
+  --padding-sm: 40px;
+  --padding-mc: 20px;
+
+  --font-lg: 24px;
+  --font-md: 18px;
+  --font-sm: 14px;
+}
+
+/* ====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Monaco", "sans-serif";
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/*======================================== */
+
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: var(--padding-mc);
+  position: relative;
+}
+
+nav>.wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: var(--font-lg);
+  color: var(--white);
+  display: block;
+}
+
+.gnb {
+  display: flex;
+  gap: var(--padding-md);
+}
+
+.gnb a {
+  font-size: var(--font-md);
+  font-weight: bold;
+  color: var(--white);
+}
+
+.gnb .login a {
+  /* 버튼모양 */
+  display: block;
+  border: 2px solid var(--white);
+  padding: 0 calc(var(--padding-md) / 2);
+}
+
+nav a:hover {
+  color: var(--hover-color);
+}
+
+nav .login a:hover {
+  border-color: var(--hover-color);
+}
+
+.toggle {
+  position: absolute;
+  right: var(--padding-mc);
+  font-size: var(--font-lg);
+  color: var(--white);
+  display: none;
+}
+
+/* 모든 section의 자식인 .wrap으의 크기를 한꺼번에 지정 */
+section>.wrap {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* banner */
+#banner {
+  width: 100%;
+  height: 100vh;
+  min-height: 768px;
+  background: url(../img/banner.jpg) center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#banner .title {
+  padding: var(--padding-ex-lg) var(--padding-mc) 0;
+}
+
+#banner .title img {
+  width: 100%;
+}
+
+.search {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-color);
+}
+
+.search>.wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-mc);
+}
+
+.search .txt {
+  font-size: var(--font-md);
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+}
+
+.search .cog {
+  font-size: var(--font-lg);
+  color: var(--accent-color);
+}
+
+/* contents */
+#contents {
+  margin-top: var(--padding-lg);
+}
+
+#contents .wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--padding-mc);
+  padding: var(--padding-mc);
+}
+
+#contents .box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#contents .box .txt {
+  border: 2px solid var(--gray);
+  border-top: none;
+  padding: var(--padding-mc);
+}
+
+#contents h2 {
+  font-size: var(--font-md);
+  margin-bottom: var(--padding-mc);
+}
+
+#contents p {
+  font-size: var(--font-sm);
+}
+
+#contents .btn {
+  text-align: center;
+  margin: var(--padding-lg) 0;
+}
+
+#contents .btn button {
+  padding: var(--padding-mc) var(--padding-md);
+  border: 2px solid var(--bg-color);
+  border-radius: var(--padding-sm);
+  color: var(--bg-color);
+  font-size: var(--font-md);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: var(--foot-color);
+  font-size: var(--font-md);
+}
+
+footer>.wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--padding-sm) var(--padding-md);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  line-height: 2.4;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer .txt {
+  width: 40%;
+  padding-left: var(--padding-lg);
+  color: var(--white);
+}
+
+footer .icon {
+  width: 100%;
+  margin-top: var(--padding-mc);
+  display: flex;
+  gap: var(--padding-mc);
+}
+
+footer .icon a {
+  font-size: var(--font-lg);
+}
+
+footer .author {
+  max-width: 1200px;
+  margin: var(--padding-md) auto 0;
+  border-top: 2px solid var(--accent-color);
+  padding: var(--padding-md) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+
+/* 뷰포트 넓이가 980px 이하일때 */
+@media screen and (max-width:980px) {
+  :root {
+    --padding-ex-lg: 200px;
+    --padding-lg: 60px;
+    --padding-md: 40px;
+    --padding-sm: 30px;
+    --padding-mc: 16px;
+
+    --font-md: 16px;
+    --font-sm: 12px;
+  }
+
+  footer>.wrap {
+    text-align: center;
+    flex-wrap: wrap;
+    gap: var(--padding-md);
+  }
+
+  footer .menu {
+    width: 100%;
+  }
+
+  footer .txt {
+    width: 100%;
+    padding: 0;
+  }
+
+  footer .icon {
+    justify-content: center;
+  }
+}
+
+/* 뷰포트가 768px이하일경우 */
+@media screen and (max-width:768px) {
+  :root {
+    --font-md: 14px;
+  }
+
+  nav>.wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gnb {
+    width: 100%;
+    gap: 0;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition:max-height 0.5s;
+  }
+
+  .gnb .active {
+    max-height: 400px;
+  }
+
+  .gnb a,
+  .gnb .login a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--padding-mc) 0;
+  }
+
+  .gnb a:hover {
+    background-color: var(--hover-color);
+    color: var(--white);
+  }
+
+  .toggle {
+    display: block;
+  }
+  #contents > .wrap{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 뷰포트가 480px 이하일때 */
+@media screen and (max-width:480px){
+  :root{
+    --padding-lg:40px;
+    --padding-md:30px;
+    --padding-sm:20px;
+  }
+  #banner{
+    height: 100vh;
+    min-height: auto;
+  }
+  #contents > .wrap{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
